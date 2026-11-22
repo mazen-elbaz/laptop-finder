@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laptop Details | Student Laptop Finder</title>
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <ul class="nav-list">
+        <li class="brand"><a href="index.html">Laptop Finder</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="laptops.html">Laptops</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+      </ul>
+    </nav>
+    <main class="p-6 md:p-12">
+      <a href="laptops.html" class="underline">Back to laptops</a>
+      <p id="error-message" role="status" class="my-4"></p>
+      <div id="loading-skeleton"></div>
+      <div id="laptop-details" class="my-6"></div>
+      <div class="flex flex-wrap gap-3">
+        <button
+          id="favorite-button"
+          class="btn-action btn-favorite"
+          type="button"
+          aria-pressed="false"
+        >
+          Add to favorites</button
+        ><button
+          id="compare-button"
+          class="btn-action btn-compare"
+          type="button"
+          aria-pressed="false"
+        >
+          Add to comparison
+        </button>
+      </div>
+    </main>
+    <script type="module" src="./js/details.js"></script>
+  </body>
+</html>

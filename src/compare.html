@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare | Student Laptop Finder</title>
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <ul class="nav-list">
+        <li class="brand"><a href="index.html">Laptop Finder</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="laptops.html">Laptops</a></li>
+        <li><a href="compare.html" aria-current="page">Compare</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+      </ul>
+    </nav>
+    <main class="compare-page p-6 md:p-12">
+      <header class="compare-header">
+        <p class="eyebrow">Decision desk</p>
+        <h1 class="text-3xl font-bold">Compare favorite laptops</h1>
+        <p class="compare-intro">
+          Choose two to four saved laptops. The strongest value in each numeric
+          row is highlighted for quick scanning.
+        </p>
+      </header>
+      <section class="compare-panel mt-8">
+        <div class="compare-toolbar">
+          <div>
+            <h2 class="text-xl font-semibold">Your shortlist</h2>
+            <p
+              id="compare-message"
+              role="status"
+              class="text-sm text-gray-600 mt-1"
+            ></p>
+          </div>
+          <div class="compare-actions">
+            <a class="btn-action btn-secondary" href="laptops.html"
+              >Add laptop</a
+            ><button
+              id="clear-compare"
+              class="btn-action btn-secondary"
+              type="button"
+            >
+              Clear selection
+            </button>
+          </div>
+        </div>
+        <div
+          id="compare-selection-list"
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-5"
+        ></div>
+      </section>
+      <section class="compare-results mt-8">
+        <div class="results-heading">
+          <h2 class="text-xl font-semibold">Side-by-side comparison</h2>
+          <span class="results-note">Best numeric value marked in green</span>
+        </div>
+        <div id="compare-table" class="mt-4"></div>
+      </section>
+    </main>
+    <script type="module" src="./js/compare-page.js"></script>
+  </body>
+</html>

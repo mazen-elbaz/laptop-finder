@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@source "./**/*.js";
+@source "../**/*.js";
+@layer base {
+  .site-nav {
+    background: #171717;
+    color: #f5f5f0;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    list-style: none;
+  }
+
+  .nav-list a {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.65rem;
+    padding: 0.55rem 0.8rem;
+    color: inherit;
+    font-weight: 600;
+  }
+
+  .nav-list a:hover,
+  .nav-list a[aria-current="page"] {
+    background: #343434;
+  }
+
+  .brand {
+    margin-right: 1rem;
+  }
+}
+@layer components {
+  .laptop-card {
+    @apply rounded-xl border p-4
+        transition-all duration-300;
+  }
+
+  .btn-action {
+    @apply rounded-xl bg-black px-4 py-2
+        font-semibold text-white transition-all;
+  }
+
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+  .btn-danger {
+    @apply bg-red-600 text-white;
+  }
+  .card-actions {
+    @apply flex flex-col gap-2 p-4 pt-0 sm:flex-row;
+  }
+  .btn-favorite,
+  .btn-compare,
+  .btn-secondary {
+    @apply bg-black text-white;
+  }
+  .btn-favorite[aria-pressed="true"],
+  .btn-compare[aria-pressed="true"] {
+    @apply ring-2 ring-offset-2 ring-black;
+  }
+
+  .compare-panel {
+    @apply rounded-xl border bg-gray-50 p-5;
+  }
+
+  .compare-option {
+    @apply flex cursor-pointer items-center gap-3 rounded-xl border bg-white p-3 transition-all;
+  }
+
+  .compare-option:hover,
+  .compare-option.is-selected {
+    @apply border-blue-600 bg-blue-50;
+  }
+
+  .compare-option input {
+    @apply h-5 w-5 accent-blue-600;
+  }
+
+  .compare-results table {
+    @apply overflow-hidden rounded-xl border bg-white;
+  }
+
+  .compare-results th,
+  .compare-results td {
+    @apply border-b p-4 text-left;
+  }
+
+  .compare-results thead th {
+    @apply bg-gray-800 text-white;
+  }
+
+  .best-value {
+    @apply bg-green-50 text-green-800;
+  }
+
+  .compare-empty {
+    @apply rounded-xl border border-dashed p-8 text-center;
+  }
+
+  .compare-header {
+    max-width: 56rem;
+  }
+  .eyebrow,
+  .results-note {
+    @apply text-sm font-semibold uppercase tracking-wide text-gray-600;
+  }
+  .compare-intro {
+    @apply mt-2 max-w-2xl text-gray-600;
+  }
+  .compare-toolbar,
+  .results-heading {
+    @apply flex flex-wrap items-center justify-between gap-4;
+  }
+  .compare-actions {
+    @apply flex flex-wrap gap-2;
+  }
+}

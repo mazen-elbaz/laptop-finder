@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laptops | Student Laptop Finder</title>
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <ul class="nav-list">
+        <li class="brand"><a href="index.html">Laptop Finder</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="laptops.html" aria-current="page">Laptops</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+      </ul>
+    </nav>
+    <main class="p-6 md:p-12">
+      <h1 class="text-2xl font-bold">Browse Laptops</h1>
+      <p class="mb-4">Find the perfect laptop for your needs.</p>
+      <p class="mb-4">Filter and sort the laptops to find the one that best suits your requirements.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
+        <label
+          >Search<input
+            id="search-input"
+            class="block w-full rounded-xl border p-2"
+            type="search"
+            placeholder="Name or brand" /></label
+        ><label
+          >Category<select id="category-filter" class="block w-full rounded-xl border p-2">
+            <option value="">All categories</option>
+            <option value="ultrabook">Ultrabook</option>
+            <option value="gaming">Gaming</option>
+            <option value="laptop">Laptop</option>
+          </select></label
+        ><label
+          >Maximum price<input
+            id="max-price"
+            class="block w-full rounded-xl border p-2"
+            type="number"
+            min="0"
+            placeholder="Any price" /></label
+        ><label
+          >Minimum RAM (GB)<input
+            id="min-ram"
+            class="block w-full rounded-xl border p-2"
+            type="number"
+            min="0"
+            placeholder="Any RAM" /></label
+        ><label
+          >Sort by<select id="sort-by" class="block w-full rounded-xl border p-2">
+            <option value="">Default</option>
+            <option value="price">Price</option>
+            <option value="batteryHours">Battery life</option>
+            <option value="weightKg">Weight</option>
+          </select></label
+        ><label
+          >Order<select id="sort-order" class="block w-full rounded-xl border p-2">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+          </select></label
+        >
+      </div>
+      <p id="result-count" class="mb-4"></p>
+      <p id="error-message" role="status" class="mb-4"></p>
+      <div
+        id="loading-skeleton"
+        class="grid grid-cols-1 md:grid-cols-3 gap-4"
+      ></div>
+      <div id="laptop-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+    </main>
+    <script type="module" src="./js/laptops.js"></script>
+  </body>
+</html>
